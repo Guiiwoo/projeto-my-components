@@ -10,6 +10,8 @@
     --color5: #8c8c8c;
     --color6: #aeaeae;
     --color7: #212128;
+
+    --default-gap: 2rem;
 }
 
 html, body {
@@ -146,7 +148,7 @@ kbd {
 
 .row {
     display: flex;
-    gap: 2rem;
+    gap: var(--default-gap);
     padding-top: 1.5rem;
     justify-content: space-between;
 }
@@ -221,7 +223,7 @@ input, textarea, select{
 }
 
 .form-quiz {
-    width: calc(50% - 1rem);
+    width: calc(50% - (var(--default-gap) / 2));
 }
 
 .btn-stroke{
