@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 :root {
     --color1: #65bc8e;
     --color2: #32323D;
@@ -24,10 +22,15 @@ body {
     display: flex;
     color: var(--color4);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(../imagens/bg-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--color6);
     margin-bottom: 3rem;
     font-weight: bolder;
@@ -44,7 +47,6 @@ p, blockquote {
 
 .highlight {
     border-left: 1px solid var(--color1);
-    font-size: 1.1rem;
     padding-left: 2rem;
     margin-bottom: 2.2rem;
 }
@@ -60,17 +62,31 @@ section {
 .main-header {
     flex: 0 0 16rem;
     background-color: var(--color2);
+    background-color: rgba(50, 50, 61, .8);
     padding: 2rem;
 }
 
 .main {
     flex: 1 0;
     background-color: var(--color3);
+    background-color: rgba(69, 71, 88, .6);
     padding: 4rem 5.5rem 4rem;
+    font-size: 1.3rem;
 }
 
 a {
     color: inherit;
+}
+
+.link-icon{
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.link-icon i{
+    font-size: 2rem;
+    margin-left: .5rem;
+    text-shadow: 0px 0px 10px var(--color1);
 }
 
 .perfil-img {
@@ -80,6 +96,9 @@ a {
 }
 
 .main-nav {
+    position: sticky;
+    top: 35px;
+    left: 0;
     text-align: center;
     padding-top: 20px;
 }
@@ -106,9 +125,9 @@ a {
     font-weight: bold;
 }
 
-.main-nav li {
-    border-bottom: 1px solid var(--color5);
+.main-nav li{
     padding: .25rem 0;
+    border-bottom: 1px solid var(--color5);
 }
 
 kbd {
@@ -153,7 +172,7 @@ kbd {
     justify-content: space-between;
 }
 
-.row .row{
+.row .row {
     padding-top: 0;
 }
 
@@ -189,17 +208,17 @@ input, label {
     box-sizing: border-box;
 }
 
-label{
+label {
     font-size: 1.2rem;
 }
 
 input[type="radio"],
-input[type=checkbox]{
+input[type=checkbox] {
     width: auto;
     margin: .8rem 0;
 }
 
-input, textarea, select{
+input, textarea, select {
     background-color: var(--color4);
     padding: 1.2rem;
     border-radius: .3125rem;
@@ -211,14 +230,16 @@ input, textarea, select{
     resize: none;
 }
 
-.btn{
+.btn {
     background-color: var(--color2);
     outline: .125rem solid var(--color6);
     color: white;
     cursor: pointer;
+    padding: 1.2rem;
+    border-radius: .3125rem;
 }
 
-.btn:hover, .btn:focus{
+.btn:hover, .btn:focus {
     background-color: var(--color7);
 }
 
@@ -226,6 +247,63 @@ input, textarea, select{
     width: calc(50% - (var(--default-gap) / 2));
 }
 
-.btn-stroke{
+.btn-stroke {
     background-color: transparent;
+}
+
+.btn-big {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+
+.btn-full {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-full+.btn-full {
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+}
+
+.table td, .table th {
+    padding: 1rem;
+}
+
+.table:not(.table-alternate, .table-verticalLines) td {
+    border-bottom: 2px solid var(--color2);
+}
+
+
+.table:not(.table-alternate, .table-verticalLines) tr:last-child td {
+    border: none;
+}
+
+.table td:last-child, .table th:last-child {
+    text-align: right;
+}
+
+.table-alternate tbody tr:nth-child(odd) {
+    background-color: var(--color2);
+}
+
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child){
+    border-right: 2px solid var(--color2);
+}
+
+.table-section{
+    margin: 6rem 0 2rem;
 }
