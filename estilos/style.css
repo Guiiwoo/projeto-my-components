@@ -85,8 +85,13 @@ a {
 
 .link-icon i{
     font-size: 2rem;
-    margin-left: .5rem;
+    margin-left: .8rem;
     text-shadow: 0px 0px 10px var(--color1);
+}
+
+.link-icon:hover{ 
+    text-decoration: underline;
+    text-decoration-color: var(--color1);
 }
 
 .perfil-img {
